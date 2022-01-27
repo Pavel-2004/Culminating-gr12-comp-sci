@@ -25,12 +25,6 @@ public class MainActivity extends AppCompatActivity {
                 text.setText(textTwo.getText());
             }
         });
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                text.setText("Hello");
-//            }
-//        });
     }
 
 }
