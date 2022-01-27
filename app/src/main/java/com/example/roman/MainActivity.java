@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     Button button;
@@ -22,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText(textTwo.getText());
+                Calculations test = new Calculations(String.valueOf(textTwo.getText()));
+
+                text.setText(String.valueOf(test.stringToInt()));
             }
         });
     }
