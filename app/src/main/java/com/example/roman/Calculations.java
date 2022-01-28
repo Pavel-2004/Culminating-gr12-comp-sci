@@ -58,14 +58,17 @@ public class Calculations {
 
     public int add(String v){
         String roman = this.roman;
-        String[] romanArr = roman.split("((?<=\\W)|(?=\\W))"); //https://stackoverflow.com/questions/5993779/use-string-split-with-multiple-delimiters
-                                                               // https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
+        String[] romanArr = roman.split("((?<=\\W)|(?=\\W))"); //splits string by all non characters, includes delimeters in product array
+        //https://stackoverflow.com/questions/5993779/use-string-split-with-multiple-delimiters
+        // https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
         int total = stringToInt(romanArr[0]);
-        for (int i = 1 ; i < romanArr.length ; i++){
-            if (romanArr[i].equals("+")) {
-                total += stringToInt(romanArr[i+1]);
-            }else if (romanArr[i].equals("-")){
-                total -= stringToInt(romanArr[i+1]);
+        if (romanArr.length > 1) {
+            for (int i = 1; i < romanArr.length; i++) {
+                if (romanArr[i].equals("+")) {
+                    total += stringToInt(romanArr[i + 1]);
+                } else if (romanArr[i].equals("-")) {
+                    total -= stringToInt(romanArr[i + 1]);
+                }
             }
         }
         return total;
