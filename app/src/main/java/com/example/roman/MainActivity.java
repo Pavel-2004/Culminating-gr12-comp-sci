@@ -132,9 +132,12 @@ public class MainActivity extends AppCompatActivity {
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
             }
         });
-        Calculations addN = new Calculations("V");
-        Log.i("answer", String.valueOf(addN.add("V+V")));
-        */
+
+
+         */
+        Calculations addN = new Calculations("V+V");
+        Log.i("answer", String.valueOf(addN.add("V+V+V")));
+
     }
 
 }

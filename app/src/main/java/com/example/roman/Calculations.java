@@ -57,7 +57,7 @@ public class Calculations {
     }
 
     public int add(String v){
-        String roman = this.roman;
+        String roman = v;
         String[] romanArr = roman.split("((?<=\\W)|(?=\\W))"); //splits string by all non characters, includes delimeters in product array
         //https://stackoverflow.com/questions/5993779/use-string-split-with-multiple-delimiters
         // https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
