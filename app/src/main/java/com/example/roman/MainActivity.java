@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
             }
         });
+        Log.i("answer", test.add("V"));
+
     }
 
 }
