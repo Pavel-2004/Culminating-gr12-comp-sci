@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonL = (Button)findViewById(R.id.L);
         Button buttonX = (Button)findViewById(R.id.X);
         Button buttonV = (Button)findViewById(R.id.V);
-        Button buttonI = (Button)findViewById(R.id.V);
+        Button buttonI = (Button)findViewById(R.id.I);
         Button buttonPlus = (Button)findViewById(R.id.plus);
         Button buttonMinus = (Button)findViewById(R.id.minus);
 
