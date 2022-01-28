@@ -7,11 +7,11 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="/Applications/Android Emulator 2.app/Contents/MacOS/api30-gphone-arm64-v8a" />
+            <value value="C:\Users\Ilya G\.android\avd\Pixel_4_API_30.avd" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-01-28T08:02:09.787925Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-01-28T19:58:56.060469300Z" />
   </component>
 </project>
