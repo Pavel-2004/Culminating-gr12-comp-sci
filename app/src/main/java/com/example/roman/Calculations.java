@@ -61,12 +61,13 @@ public class Calculations {
         String[] romanArr = roman.split("((?<=\\W)|(?=\\W))"); //splits string by all non characters, includes delimeters in product array
         //https://stackoverflow.com/questions/5993779/use-string-split-with-multiple-delimiters
         // https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
-        int total = stringToInt(romanArr[0]);
+        int total = 0;
         if (romanArr.length > 1) {
+            total = stringToInt(romanArr[0]);
             for (int i = 1; i < romanArr.length; i++) {
-                if (romanArr[i].equals("+")) {
+                if (romanArr[i].equals("+") && i+1 != romanArr.length) {
                     total += stringToInt(romanArr[i + 1]);
-                } else if (romanArr[i].equals("-")) {
+                }else if (romanArr[i].equals("-") && i+1 != romanArr.length) {
                     total -= stringToInt(romanArr[i + 1]);
                 }
             }
