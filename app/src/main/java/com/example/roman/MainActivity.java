@@ -35,14 +35,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         text = (TextView)findViewById(R.id.title_text);
-
-
+        TextView answer = (TextView)findViewById(R.id.answer);
+        Calculations addN = new Calculations("V+V");
+        Log.i("answer", String.valueOf(addN.add("V+V+V")));
 
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //add C
                 text.setText(String.valueOf(text.getText()) + "C");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //add D
                 text.setText(String.valueOf(text.getText()) + "D");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //add M
                 text.setText(String.valueOf(text.getText()) + "M");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //add L
                 text.setText(String.valueOf(text.getText()) + "L");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -77,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //add X
                 text.setText(String.valueOf(text.getText()) + "X");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -86,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 //add V
 
                 text.setText(String.valueOf(text.getText()) + "V");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -93,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 text.setText(String.valueOf(text.getText()) + "I");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -101,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //add plus
                 text.setText(String.valueOf(text.getText()) + "+");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
 
@@ -109,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //add minus
                 text.setText(String.valueOf(text.getText()) + "-");
+                answer.setText(String.valueOf( addN.add(String.valueOf(text.getText()))));
             }
         });
         /*
@@ -118,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button)findViewById(R.id.start_button);
 
          */
-        text = (TextView)findViewById(R.id.title_text);
+
         //textTwo = (EditText) findViewById(R.id.name);
 
         /*
@@ -135,8 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
 
          */
-        Calculations addN = new Calculations("V+V");
-        Log.i("answer", String.valueOf(addN.add("V+V+V")));
+
 
     }
 
