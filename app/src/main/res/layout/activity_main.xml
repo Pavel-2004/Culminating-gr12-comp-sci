@@ -128,4 +128,12 @@
         app:layout_constraintStart_toStartOf="@+id/I"
         app:layout_constraintTop_toBottomOf="@+id/plus" />
 
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="clear"
+        app:layout_constraintTop_toBottomOf="@+id/plus"
+        tools:layout_editor_absoluteX="151dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

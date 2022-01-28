@@ -33,11 +33,27 @@ public class MainActivity extends AppCompatActivity {
         Button buttonPlus = (Button)findViewById(R.id.plus);
         Button buttonMinus = (Button)findViewById(R.id.minus);
 
+        Button clear = (Button)findViewById(R.id.clear);
+
+
 
         text = (TextView)findViewById(R.id.title_text);
         TextView answer = (TextView)findViewById(R.id.answer);
         Calculations addN = new Calculations("V+V");
         Log.i("answer", String.valueOf(addN.add("V+V+V")));
+
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setText("");
+                answer.setText("0");
+
+            }
+        });
+
+
+
 
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
