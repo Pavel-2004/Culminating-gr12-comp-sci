@@ -29,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Calculations test = new Calculations(String.valueOf(textTwo.getText()));
 
-                text.setText(String.valueOf(test.stringToInt()));
+                text.setText(String.valueOf(test.stringToInt(String.valueOf(textTwo.getText()))));
                 imm = (InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
             }
         });
-        Log.i("answer", test.add("V"));
+        Calculations addN = new Calculations("V");
+        Log.i("answer", String.valueOf(addN.add("V+V")));
 
     }
 

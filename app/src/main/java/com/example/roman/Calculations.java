@@ -1,11 +1,6 @@
 package com.example.roman;
-import android.text.Editable;
 
 import java.util.HashMap;
-
-import android.util.Log;
-
-import java.util.ArrayList;
 
 
 public class Calculations {
@@ -16,8 +11,8 @@ public class Calculations {
 
 
 
-    public int stringToInt(){
-        String roman = this.roman;
+    public int stringToInt(String num){
+        String roman = num;
         HashMap<String, Integer> strInt = new HashMap<String, Integer>();
         strInt.put("M", 1000);
         strInt.put("D", 500);
@@ -61,7 +56,7 @@ public class Calculations {
         return total;
     }
 
-    public int add(){
+    public int add(String v){
         String roman = this.roman;
         String[] romanArr = roman.split("((?<=\\W)|(?=\\W))"); //https://stackoverflow.com/questions/5993779/use-string-split-with-multiple-delimiters
                                                                // https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
