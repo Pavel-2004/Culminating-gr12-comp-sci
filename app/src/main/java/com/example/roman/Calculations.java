@@ -5,6 +5,8 @@ import java.util.HashMap;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+
 
 public class Calculations {
     public static String roman;
@@ -56,6 +58,21 @@ public class Calculations {
             }
         }
 
+        return total;
+    }
+
+    public int add(){
+        String roman = this.roman;
+        String[] romanArr = roman.split("((?<=\\W)|(?=\\W))"); //https://stackoverflow.com/questions/5993779/use-string-split-with-multiple-delimiters
+                                                               // https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
+        int total = stringToInt(romanArr[0]);
+        for (int i = 1 ; i < romanArr.length ; i++){
+            if (romanArr[i].equals("+")) {
+                total += stringToInt(romanArr[i+1]);
+            }else if (romanArr[i].equals("-")){
+                total -= stringToInt(romanArr[i+1]);
+            }
+        }
         return total;
     }
 }
