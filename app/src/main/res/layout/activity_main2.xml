@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foregroundTint="#EA1111"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
+
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/eight"
+        app:layout_constraintTop_toBottomOf="@+id/nine" />
 
     <TextView
         android:id="@+id/titleOfApp"
@@ -35,7 +45,7 @@
         android:id="@+id/three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="M"
+        android:text="3"
         app:layout_constraintBottom_toBottomOf="@+id/two"
         app:layout_constraintStart_toStartOf="@+id/six" />
 
@@ -44,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
-        android:text="L"
+        android:text="6"
         app:layout_constraintBaseline_toBaselineOf="@+id/five"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/five" />
@@ -53,7 +63,7 @@
         android:id="@+id/five"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="X"
+        android:text="5"
         app:layout_constraintEnd_toStartOf="@+id/six"
         app:layout_constraintStart_toEndOf="@+id/four"
         app:layout_constraintTop_toBottomOf="@+id/three" />
@@ -62,7 +72,7 @@
         android:id="@+id/four"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="V"
+        android:text="4"
         app:layout_constraintBottom_toBottomOf="@+id/five"
         app:layout_constraintEnd_toStartOf="@+id/five"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -74,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
-        android:text="I"
+        android:text="9"
         app:layout_constraintBaseline_toBaselineOf="@+id/eight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/eight" />
@@ -83,7 +93,7 @@
         android:id="@+id/seven"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:text="7"
         app:layout_constraintBaseline_toBaselineOf="@+id/eight"
         app:layout_constraintEnd_toStartOf="@+id/eight"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -93,7 +103,7 @@
         android:id="@+id/eight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="-"
+        android:text="8"
         app:layout_constraintEnd_toStartOf="@+id/nine"
         app:layout_constraintStart_toEndOf="@+id/seven"
         app:layout_constraintTop_toBottomOf="@+id/four" />
@@ -103,13 +113,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="163dp"
-        android:text="D"
+        android:text="2"
         app:iconTint="#673AB7"
         app:layout_constraintBottom_toBottomOf="@+id/one"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/one"
         app:layout_constraintTop_toTopOf="@+id/one"
-        tools:text="D" />
+        tools:text="2" />
 
     <Button
         android:id="@+id/one"
@@ -119,12 +129,11 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="269dp"
         android:layout_marginBottom="270dp"
-        android:text="C"
+        android:text="1"
         app:layout_constraintBottom_toTopOf="@+id/answer"
         app:layout_constraintEnd_toStartOf="@+id/two"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="C" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title_text"
@@ -146,14 +155,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
         android:layout_marginEnd="206dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="114dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#00BCD4"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityTwo"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
@@ -175,12 +186,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <androidx.constraintlayout.Constraints-->
-<!--        android:id="@+id/constraints"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/group"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/group" />-->
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group3"
@@ -196,8 +201,8 @@
         android:id="@+id/activityTwo"
         android:layout_width="215dp"
         android:layout_height="47dp"
-        android:layout_marginTop="40dp"
-        android:text="Switch To Integer to Roman converter"
+        android:layout_marginTop="4dp"
+        android:text="Switch To Roman To Integer"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

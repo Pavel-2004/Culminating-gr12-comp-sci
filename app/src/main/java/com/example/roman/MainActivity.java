@@ -2,9 +2,8 @@ package com.example.roman;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.InputDevice;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -23,15 +22,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button buttonC = (Button)findViewById(R.id.C);
-        Button buttonD = (Button)findViewById(R.id.D);
-        Button buttonM = (Button)findViewById(R.id.M);
-        Button buttonL = (Button)findViewById(R.id.L);
-        Button buttonX = (Button)findViewById(R.id.X);
-        Button buttonV = (Button)findViewById(R.id.V);
-        Button buttonI = (Button)findViewById(R.id.I);
-        Button buttonPlus = (Button)findViewById(R.id.plus);
-        Button buttonMinus = (Button)findViewById(R.id.minus);
+        Button buttonC = (Button)findViewById(R.id.one);
+        Button buttonD = (Button)findViewById(R.id.two);
+        Button buttonM = (Button)findViewById(R.id.three);
+        Button buttonL = (Button)findViewById(R.id.six);
+        Button buttonX = (Button)findViewById(R.id.five);
+        Button buttonV = (Button)findViewById(R.id.four);
+        Button buttonI = (Button)findViewById(R.id.nine);
+        Button buttonPlus = (Button)findViewById(R.id.seven);
+        Button buttonMinus = (Button)findViewById(R.id.eight);
+        Button activityTwo = (Button)findViewById(R.id.activityTwo);
 
         Button clear = (Button)findViewById(R.id.clear);
 
@@ -41,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         TextView answer = (TextView)findViewById(R.id.answer);
         Calculations addN = new Calculations("V+V");
         Log.i("answer", String.valueOf(addN.add("V+V+V")));
+
+        activityTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
 
 
         clear.setOnClickListener(new View.OnClickListener() {

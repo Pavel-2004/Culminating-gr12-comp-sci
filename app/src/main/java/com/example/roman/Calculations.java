@@ -96,5 +96,33 @@ public class Calculations {
         return total;
     }
 
+    public String IntToString(int num){
+        //maps numbers and romans corelated to one another
+        //organized largest to smallest in order to check the largest numbers first
+        int numbers[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String roman[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+        //the current number that keeps decreasing until it gets to 0
+        int curNum = num;
+        //final roman stored here
+        String text = "";
+
+
+        while(curNum != 0){
+
+            for (int i = 0; i < numbers.length; i++) {
+                //checks if num could be subtracted to form pos nunber, if so it executes that
+                if((curNum - numbers[i]) >= 0){
+                    text = text + roman[i];
+
+                    curNum = curNum - numbers[i];
+                    break;
+                }
+            }
+        }
+
+        return text;
+    }
+
 
 }
