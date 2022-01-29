@@ -153,6 +153,7 @@
         android:id="@+id/answer"
         android:layout_width="300dp"
         android:layout_height="200dp"
+        android:scrollbars="vertical"
         android:layout_marginStart="49dp"
         android:layout_marginTop="86dp"
         android:layout_marginEnd="44dp"
