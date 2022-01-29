@@ -151,11 +151,12 @@
 
     <TextView
         android:id="@+id/answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="205dp"
-        android:layout_marginEnd="206dp"
-        android:layout_marginBottom="114dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="83dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#00BCD4"
         android:visibility="visible"
@@ -163,8 +164,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityTwo"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/activityTwo" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
@@ -207,5 +207,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
