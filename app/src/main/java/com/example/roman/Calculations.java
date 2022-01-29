@@ -61,12 +61,10 @@ public class Calculations {
     }
 
 
-<<<<<<< HEAD
+
     //this takes care of any operations such as addition
-    public int add(String v){
-=======
+
     public int add(String v){ //method that converts the inputed String into a list of the following format {LIX, + , IV , - X, + , L}, and handles addition and subtraction
->>>>>>> 349154b92b25c49d8c20e960550b493c626c95fb
         String roman = v;
         if(v == ""){
             return 0;  //Checks if the string is empty, in which case total will be 0
