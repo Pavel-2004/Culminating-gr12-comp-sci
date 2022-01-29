@@ -64,24 +64,27 @@ public class Calculations {
         return result;
     }
 
-    public int add(String v){
+    public int add(String v){ //method that converts the inputed String into a list of the following format {LIX, + , IV , - X, + , L}, and handles addition and subtraction
         String roman = v;
         if(v == ""){
-            return 0;
+            return 0;  //Checks if the string is empty, in which case total will be 0
         }
         String[] romanArr = roman.split("((?<=\\W)|(?=\\W))"); //splits string by all non characters, includes delimeters in product array
         //https://stackoverflow.com/questions/5993779/use-string-split-with-multiple-delimiters
-        // https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
+        //https://stackoverflow.com/questions/2206378/how-to-split-a-string-but-also-keep-the-delimiters
         int total = stringToInt(romanArr[0]);
         int counter = 0;
 
 
         if (romanArr.length > 1) {
-            for (int i = 1; i < romanArr.length; i++) {
+            for (int i = 1; i < romanArr.length; i++) { //checks the elements in the string to see if they are a plus, minus, or numeral
                 if (romanArr[i].equals("-")){
-                    counter++;
+                    counter++; //Counts the number of minus "-" signs
                 }else if (romanArr[i].equals("+")) {
-                }else{
+                }else{ //if the current element is neither a plus or a minus, it is thus a numeral, so the method checks
+                       //if there are an even amount of minus signs, in which case additon will be performed (2--2 = 4)
+                       //if there are zero minus signs, addition is performed
+                       //if neither is true, there is an odd amount of minus signs, and subraction is performed (4+++-+--+2 = 2)
                     if(counter % 2 == 0){
                         total += stringToInt(romanArr[i]);
                     }else if(counter > 0){
@@ -89,7 +92,7 @@ public class Calculations {
                     }else{
                         total += stringToInt(romanArr[i]);
                     }
-                    counter = 0;
+                    counter = 0; //sets the counter back to zero for next calculation
                 }
             }
         }
