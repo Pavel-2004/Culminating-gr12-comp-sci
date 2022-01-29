@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.Button;
@@ -35,6 +36,9 @@ public class MainActivity2 extends AppCompatActivity {
         TextView answer = (TextView)findViewById(R.id.answer);
         answer.setMovementMethod(new ScrollingMovementMethod());
 
+
+
+        answer.setMovementMethod(new ScrollingMovementMethod());
 
 
         Calculations addN = new Calculations("");
