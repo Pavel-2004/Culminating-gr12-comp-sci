@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -33,6 +34,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         TextView current = (TextView)findViewById(R.id.title_text);
         TextView answer = (TextView)findViewById(R.id.answer);
+        answer.setMovementMethod(new ScrollingMovementMethod());
+
 
 
         answer.setMovementMethod(new ScrollingMovementMethod());
