@@ -12,6 +12,9 @@ import android.widget.TextView;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    //to see how this works as it is almost identical see MainActivity2.java
     Button button;
     InputMethodManager imm;
     TextView text;

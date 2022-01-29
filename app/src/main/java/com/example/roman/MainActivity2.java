@@ -17,8 +17,11 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //set the proper layout for this action
         setContentView(R.layout.activity_main2);
 
+
+        //defines all the references to the buttons
         Button switchActiviy = (Button)findViewById(R.id.activityTwo);
         Button one = (Button)findViewById(R.id.one);
         Button two = (Button)findViewById(R.id.two);
@@ -32,22 +35,29 @@ public class MainActivity2 extends AppCompatActivity {
         Button zero = (Button)findViewById(R.id.zero);
         Button clear = (Button)findViewById(R.id.clear);
 
+        //definition of all of the text areas
         TextView current = (TextView)findViewById(R.id.title_text);
         TextView answer = (TextView)findViewById(R.id.answer);
+
+
+        //allows scrolling
         answer.setMovementMethod(new ScrollingMovementMethod());
 
 
-
-        answer.setMovementMethod(new ScrollingMovementMethod());
-
-
+        //creates an instance of the Calculations class where all of the calculations are done
         Calculations addN = new Calculations("");
 
 
+
+
+        //all of these are event listeners for every click of a button
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //this sets the text plus a button
                 current.setText(String.valueOf(current.getText() + "1"));
+
+                //calculaters integer to string method by using what is already in the textbox as an argument
                 answer.setText(addN.IntToString(Integer.valueOf(String.valueOf(current.getText()))));
             }
         });
@@ -133,13 +143,18 @@ public class MainActivity2 extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //clears everything
                 current.setText("");
+                answer.setText("");
             }
         });
 
         switchActiviy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //this is so that you could switch the activity by creating an intent
                 Intent intent = new Intent(MainActivity2.this, MainActivity.class);
                 startActivity(intent);
             }

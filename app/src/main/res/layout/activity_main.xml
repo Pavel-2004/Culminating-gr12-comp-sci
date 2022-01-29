@@ -67,7 +67,8 @@
         app:layout_constraintEnd_toStartOf="@+id/five"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/one" />
+        app:layout_constraintTop_toBottomOf="@+id/one"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/nine"
@@ -124,19 +125,22 @@
         app:layout_constraintEnd_toStartOf="@+id/two"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="C" />
 
     <TextView
         android:id="@+id/title_text"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginStart="55dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="56dp"
         android:rotationX="2"
         android:scrollbars="horizontal"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#FF9800"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleOfApp" />
 
@@ -152,7 +156,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
         android:layout_marginEnd="206dp"
-        android:layout_marginBottom="72dp"
         android:scrollbars="vertical"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#00BCD4"
@@ -204,7 +207,7 @@
         android:id="@+id/activityTwo"
         android:layout_width="215dp"
         android:layout_height="47dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="Switch To Integer to Roman converter"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"

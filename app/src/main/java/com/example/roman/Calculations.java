@@ -10,10 +10,11 @@ public class Calculations {
     }
 
 
-
+    //converts string to integer
     public int stringToInt(String num){
         String roman = num;
         HashMap<String, Integer> strInt = new HashMap<String, Integer>();
+        //maps all of the letters
         strInt.put("M", 1000);
         strInt.put("D", 500);
         strInt.put("C", 100);
@@ -22,26 +23,29 @@ public class Calculations {
         strInt.put("V",5);
         strInt.put("I",1);
 
-
+        //variables for the final calculations
         int total = 0;
+        //variables for the current pos
         int index = 0;
-        int counter = 0;
+        //stores for current letter in number form
         int add;
-        String eh;
-        Boolean x = true;
-        System.out.println("here");
-        while (true) {
 
+
+        while (true) {
+            //if there is another character to look at that
             if(roman.length()-1 > index){
+                //checks if the next character is larger in order to see if special case
                 if(strInt.get(String.valueOf(roman.charAt(index))) < strInt.get(String.valueOf(roman.charAt(index+1)))){
                     add = strInt.get(String.valueOf(roman.charAt(index+1))) - strInt.get(String.valueOf(roman.charAt(index)));
                     total = total + add;
+                    //skips 2 pos ahead as already checked
                     if(index+2<roman.length()){
                         index = index + 2;
 
                     } else{
                         break;
                     }
+                    //if there are no more characters
                 } else{
                     total = total + strInt.get(String.valueOf(roman.charAt(index)));
                     index = index + 1;
@@ -56,14 +60,8 @@ public class Calculations {
         return total;
     }
 
-    public static String removeLastCharacter(String str) {
-        String result = null;
-        if ((str != null) && (str.length() > 0)) {
-            result = str.substring(0, str.length() - 1);
-        }
-        return result;
-    }
 
+    //this takes care of any operations such as addition
     public int add(String v){
         String roman = v;
         if(v == ""){
@@ -96,6 +94,8 @@ public class Calculations {
         return total;
     }
 
+
+    //my function to convert int to string
     public String IntToString(int num){
         //maps numbers and romans corelated to one another
         //organized largest to smallest in order to check the largest numbers first
